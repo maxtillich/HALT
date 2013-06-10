@@ -11,8 +11,8 @@ function drawChart() {
     var data_ = google.visualization.arrayToDataTable(data__);
 
     var options = {
-      title: 'Push it!',
-      hAxis: {title: 'Button', titleTextStyle: {color: 'red'}}
+      title: 'HALT',
+      hAxis: {title: '', titleTextStyle: {color: 'red'}}
     };
     var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     chart.draw(data_, options);

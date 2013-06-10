@@ -1,21 +1,20 @@
-console.log('loaded');
-// Load the Visualization API and the piechart package.
-    google.load('visualization', '1', {'packages':['corechart']});
-      
-    // Set a callback to run when the Google Visualization API is loaded.
-    google.setOnLoadCallback(drawChart);
-      
-    function drawChart() {
-      var jsonData = $.ajax({
-          url: "latest.json",
-          dataType:"json",
-          async: false
-          }).responseText;
-          
-      // Create our data table out of JSON data loaded from server.
-      var data = new google.visualization.DataTable(jsonData);
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
 
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, {width: 400, height: 240});
-    }
+function drawChart() {
+  var data__ = [['Button', 'Count']];
+  $.getJSON('latest.json', function(data) {
+    $.each(data, function(key, val) {
+      data__.push([key, val]);
+    });
+
+    var data_ = google.visualization.arrayToDataTable(data__);
+
+    var options = {
+      title: 'Push it!',
+      hAxis: {title: 'Button', titleTextStyle: {color: 'red'}}
+    };
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart.draw(data_, options);
+  });
+}

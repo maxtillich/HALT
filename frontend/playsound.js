@@ -110,9 +110,9 @@ $(function() {
     };
     var start_magic = function() {
         interval_data = window.setInterval(update_data, 1000);
-        interval_sounds = window.setInterval(update_sounds, 10000);
-        interval_sounds_first = window.setInterval(update_sounds_first, 15000);
-        interval_sounds_second = window.setInterval(update_sounds_second, 24000);
+        interval_sounds = window.setInterval(update_sounds, 270000);
+        interval_sounds_first = window.setInterval(update_sounds_first, 180000);
+        interval_sounds_second = window.setInterval(update_sounds_second, 786000);
     };
 
 

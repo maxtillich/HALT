@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>Sound</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="dataviz.js"></script>
+    <script type="text/javascript" src="playsound.js"></script>
+</head>
+<body>
+	<h1>Sound</h1>
+
+	<div id="chart_div" style="width:400; height:300"></div>
+
+	<hr>
+
+	<div id="controls">
+
+		<div>
+			Grumble <audio class="audio" id="audio1" src="audio/grumble.wav" preload="auto" controls></audio><br>
+			Scream <audio class="audio" id="audio2" src="audio/scream.mp3" preload="auto" controls></audio><br>
+			Cry <audio class="audio" id="audio3" src="audio/cry.mp3" preload="auto" controls></audio><br>
+			Yawn <audio class="audio" id="audio4" src="audio/yawn.mp3" preload="auto" controls></audio><br>
+			<button id="reset-audio">Reset</button><br>
+			<button id="pause-audio">Pause</button><br>
+		</div>
+
+	</div>
+
+	<hr>
+
+	<div id="magic">
+
+		<button id="start-magic">Start Magic</button><br>
+		<button id="stop-magic">Stop Magic</button>
+
+	</div>
+
+
+</body>
+</html>

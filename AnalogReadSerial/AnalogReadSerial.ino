@@ -4,10 +4,10 @@ int states[5];
 void setup() {
   Serial.begin(9600);
   states[0] = 0;
-  states[1] = 558;
-  states[2] = 737;
+  states[1] = 512;
+  states[2] = 558;
   states[3] = 844;
-  states[4] = 512;
+  states[4] = 737;
 }
 
 void loop() {

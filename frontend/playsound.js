@@ -121,11 +121,13 @@ $(function() {
     $('#stop-magic').click(function() {
         stop_magic();
         $('#start-magic').attr('disabled', false);
+        console.log("magic stopped");
     });
 
     $('#start-magic').click(function() {
         start_magic();
-        $(this).attr('disabled', true);   
+        $(this).attr('disabled', true); 
+        console.log("magic started");  
     });
 
 

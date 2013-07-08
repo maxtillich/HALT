@@ -75,7 +75,7 @@ $(function() {
         if (data_array.length == 0) return;
 
         setSound(data_array[current_sound].nr, 1.0);
-
+        console.log('alle 5min '+current_sound);
         current_sound ++;
         if(current_sound >= data_array.length ) {
             current_sound = 0;
@@ -88,6 +88,7 @@ $(function() {
         if (data_array.length == 0) return;
         if (sound_is_playing) return;
         setSound(data_array[0].nr, 0.3);
+        console.log('alle 3 min');
     };
 
     // Den zweitgroessten alle 13 minuten
@@ -96,6 +97,7 @@ $(function() {
         if (data_array.length == 0) return;
         if (sound_is_playing) return;
         setSound(data_array[1].nr, 0.4);
+        console.log('alle 13 min');
     };
 
 
